@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<BaseLayout title="Join the Tickr Beta">
+  <main class="relative min-h-screen overflow-hidden px-4 pb-20 pt-24 text-white sm:pt-28">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_#111827_0%,_#0f172a_50%,_#020617_100%)]"></div>
+    <div class="absolute -left-32 top-24 h-72 w-72 rounded-full bg-fuchsia-500/15 blur-[140px]"></div>
+    <div class="absolute right-10 top-40 h-72 w-72 rounded-full bg-violet-500/15 blur-[160px]"></div>
+
+    <Navbar />
+
+    <div class="mx-auto mt-10 w-full max-w-2xl space-y-8">
+      <header class="space-y-5 text-left">
+        <p class="text-xs uppercase tracking-[0.3em] text-white/50">Tickr</p>
+        <h1 class="text-3xl font-semibold sm:text-4xl">Join the beta</h1>
+        <p class="text-base text-white/70 leading-relaxed">
+          Share your email and platform preference to get early access to Tickr.
+        </p>
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white/80 transition hover:-translate-y-0.5 hover:text-white"
+        >
+          ← Back to home
+        </a>
+      </header>
+
+      <form
+        name="tickr-beta"
+        method="POST"
+        action="/join-the-beta/thanks"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        class="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6"
+      >
+        <input type="hidden" name="form-name" value="tickr-beta" />
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </p>
+        <div class="space-y-2">
+          <label class="text-sm font-semibold text-white/80" for="beta-email">Email</label>
+          <input
+            id="beta-email"
+            name="email"
+            type="email"
+            required
+            placeholder="you@domain.com"
+            class="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-white/30 focus:outline-none"
+          />
+        </div>
+
+        <fieldset class="space-y-3">
+          <legend class="text-sm font-semibold text-white/80">Platform</legend>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <label class="flex w-full items-center justify-between gap-2 rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/80">
+              <input
+                type="radio"
+                name="platform"
+                value="ios"
+                required
+                class="h-4 w-4 accent-fuchsia-300"
+              />
+              iOS
+            </label>
+            <label class="flex w-full items-center justify-between gap-2 rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/80">
+              <input
+                type="radio"
+                name="platform"
+                value="android"
+                required
+                class="h-4 w-4 accent-fuchsia-300"
+              />
+              Android
+            </label>
+          </div>
+        </fieldset>
+
+        <button
+          type="submit"
+          class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-purple-700 shadow-lg transition hover:-translate-y-0.5"
+        >
+          Request access
+        </button>
+      </form>
+    </div>
+  </main>
+</BaseLayout>
