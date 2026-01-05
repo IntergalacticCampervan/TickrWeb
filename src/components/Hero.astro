@@ -177,99 +177,188 @@ import FloatingCard from "./FloatingCard.astro";
         </div>
 
         <div class="w-full md:hidden">
-          <div
-            id="achievement-carousel"
-            class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 pt-2"
-          >
-            <div class="min-w-[240px] snap-center">
-              <FloatingCard
-                title="x day streak"
-                value="12 days"
-                description="Consistency pays off. Keep the streak alive."
-                className="w-full"
-              >
-                <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M12 2c2.76 2.3 4.5 5.23 4.5 8.4 0 4.13-3.01 7.6-6.75 7.6S3 14.53 3 10.4C3 7.23 4.74 4.3 7.5 2c.6 2.2 1.87 3.9 4.5 5.2C11.97 5.2 11.7 3.63 12 2Z"
-                  />
-                </svg>
-              </FloatingCard>
-            </div>
-            <div class="min-w-[240px] snap-center">
-              <FloatingCard
-                title="Morning Person"
-                value="$42.10"
-                description="Earned your first $X before 9:00 AM."
-                className="w-full"
-              >
-                <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M6 6h2V3H6v3Zm9 0h2V3h-2v3ZM3 11h3V9H3v2Zm15 0h3V9h-3v2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm8 4h-2a6 6 0 1 1-12 0H4a8 8 0 1 0 16 0Z"
-                  />
-                </svg>
-              </FloatingCard>
-            </div>
-            <div class="min-w-[240px] snap-center">
-              <FloatingCard
-                title="Daily Win"
-                value="$18.40"
-                description="Hit your daily goal before lunch."
-                className="w-full"
-              >
-                <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M12 3a6 6 0 0 1 6 6c0 4-3 6-6 9-3-3-6-5-6-9a6 6 0 0 1 6-6Zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
-                  />
-                </svg>
-              </FloatingCard>
-            </div>
-            <div class="min-w-[240px] snap-center">
-              <FloatingCard
-                title="Double Duty"
-                value="2 sources"
-                description="Had two income sources running simultaneously."
-                className="w-full"
-              >
-                <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M7 7a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm10 0a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM4 18a4 4 0 0 1 6.66-2.97A5 5 0 0 0 7 20H4v-2Zm16 2h-3a5 5 0 0 0-3.66-4.97A4 4 0 0 1 20 18v2Z"
-                  />
-                </svg>
-              </FloatingCard>
-            </div>
-            <div class="min-w-[240px] snap-center">
-              <FloatingCard
-                title="First Payout"
-                value="$120.00"
-                description="Cleared your first milestone payout."
-                className="w-full"
-              >
-                <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm1 5h-2v3H8v2h3v3h2v-3h3v-2h-3V7Z"
-                  />
-                </svg>
-              </FloatingCard>
-            </div>
-            <div class="min-w-[240px] snap-center">
-              <FloatingCard
-                title="The Clock-Puncher"
-                value="5 days"
-                description="Started a manual stream 5 days in a row."
-                className="w-full"
-              >
-                <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M12 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm1 4h-2v5.2l3.6 2.1 1-1.7-2.6-1.5V6Zm-7 13h12v2H6v-2Z"
-                  />
-                </svg>
-              </FloatingCard>
+          <div id="achievement-carousel" class="mobile-carousel">
+            <div class="mobile-carousel-track">
+              <div class="min-w-[240px] mobile-card-drift" data-shift="10">
+                <FloatingCard
+                  title="x day streak"
+                  value="12 days"
+                  description="Consistency pays off. Keep the streak alive."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 2c2.76 2.3 4.5 5.23 4.5 8.4 0 4.13-3.01 7.6-6.75 7.6S3 14.53 3 10.4C3 7.23 4.74 4.3 7.5 2c.6 2.2 1.87 3.9 4.5 5.2C11.97 5.2 11.7 3.63 12 2Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="14">
+                <FloatingCard
+                  title="Morning Person"
+                  value="$42.10"
+                  description="Earned your first $X before 9:00 AM."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M6 6h2V3H6v3Zm9 0h2V3h-2v3ZM3 11h3V9H3v2Zm15 0h3V9h-3v2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm8 4h-2a6 6 0 1 1-12 0H4a8 8 0 1 0 16 0Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="12">
+                <FloatingCard
+                  title="Daily Win"
+                  value="$18.40"
+                  description="Hit your daily goal before lunch."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 3a6 6 0 0 1 6 6c0 4-3 6-6 9-3-3-6-5-6-9a6 6 0 0 1 6-6Zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="16">
+                <FloatingCard
+                  title="Double Duty"
+                  value="2 sources"
+                  description="Had two income sources running simultaneously."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M7 7a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm10 0a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM4 18a4 4 0 0 1 6.66-2.97A5 5 0 0 0 7 20H4v-2Zm16 2h-3a5 5 0 0 0-3.66-4.97A4 4 0 0 1 20 18v2Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="13">
+                <FloatingCard
+                  title="First Payout"
+                  value="$120.00"
+                  description="Cleared your first milestone payout."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm1 5h-2v3H8v2h3v3h2v-3h3v-2h-3V7Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="11">
+                <FloatingCard
+                  title="The Clock-Puncher"
+                  value="5 days"
+                  description="Started a manual stream 5 days in a row."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm1 4h-2v5.2l3.6 2.1 1-1.7-2.6-1.5V6Zm-7 13h12v2H6v-2Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="10" aria-hidden="true">
+                <FloatingCard
+                  title="x day streak"
+                  value="12 days"
+                  description="Consistency pays off. Keep the streak alive."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 2c2.76 2.3 4.5 5.23 4.5 8.4 0 4.13-3.01 7.6-6.75 7.6S3 14.53 3 10.4C3 7.23 4.74 4.3 7.5 2c.6 2.2 1.87 3.9 4.5 5.2C11.97 5.2 11.7 3.63 12 2Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="14" aria-hidden="true">
+                <FloatingCard
+                  title="Morning Person"
+                  value="$42.10"
+                  description="Earned your first $X before 9:00 AM."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M6 6h2V3H6v3Zm9 0h2V3h-2v3ZM3 11h3V9H3v2Zm15 0h3V9h-3v2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm8 4h-2a6 6 0 1 1-12 0H4a8 8 0 1 0 16 0Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="12" aria-hidden="true">
+                <FloatingCard
+                  title="Daily Win"
+                  value="$18.40"
+                  description="Hit your daily goal before lunch."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 3a6 6 0 0 1 6 6c0 4-3 6-6 9-3-3-6-5-6-9a6 6 0 0 1 6-6Zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="16" aria-hidden="true">
+                <FloatingCard
+                  title="Double Duty"
+                  value="2 sources"
+                  description="Had two income sources running simultaneously."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M7 7a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm10 0a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM4 18a4 4 0 0 1 6.66-2.97A5 5 0 0 0 7 20H4v-2Zm16 2h-3a5 5 0 0 0-3.66-4.97A4 4 0 0 1 20 18v2Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="13" aria-hidden="true">
+                <FloatingCard
+                  title="First Payout"
+                  value="$120.00"
+                  description="Cleared your first milestone payout."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm1 5h-2v3H8v2h3v3h2v-3h3v-2h-3V7Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
+              <div class="min-w-[240px] mobile-card-drift" data-shift="11" aria-hidden="true">
+                <FloatingCard
+                  title="The Clock-Puncher"
+                  value="5 days"
+                  description="Started a manual stream 5 days in a row."
+                  className="w-full"
+                >
+                  <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm1 4h-2v5.2l3.6 2.1 1-1.7-2.6-1.5V6Zm-7 13h12v2H6v-2Z"
+                    />
+                  </svg>
+                </FloatingCard>
+              </div>
             </div>
           </div>
         </div>
@@ -299,8 +388,6 @@ import FloatingCard from "./FloatingCard.astro";
 <script is:inline>
   const cards = document.querySelectorAll(".card-drift");
   const hero = document.querySelector("#hero");
-  const carousel = document.querySelector("#achievement-carousel");
-  const mobileQuery = window.matchMedia("(max-width: 767px)");
   let ticking = false;
   const onScroll = () => {
     if (ticking) return;
@@ -328,11 +415,6 @@ import FloatingCard from "./FloatingCard.astro";
         card.style.setProperty("--spread-y", `${clampedY}px`);
       });
 
-      if (carousel && mobileQuery.matches) {
-        const maxCarouselScroll = carousel.scrollWidth - carousel.clientWidth;
-        carousel.scrollLeft = Math.max(0, maxCarouselScroll * eased);
-      }
-
       ticking = false;
     });
   };
@@ -352,5 +434,47 @@ import FloatingCard from "./FloatingCard.astro";
     transform: translate(var(--stack-x), var(--stack-y)) translate(var(--spread-x), var(--spread-y))
       rotate(var(--tilt));
     transition: transform 140ms ease-out;
+  }
+
+  .mobile-card-drift {
+    transform: translateY(0);
+    will-change: transform;
+    min-height: 136px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .mobile-card-drift > div {
+    height: 100%;
+  }
+
+  .mobile-carousel {
+    overflow: hidden;
+    width: 100%;
+    padding: 0.5rem 0 1rem;
+  }
+
+  .mobile-carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: max-content;
+    animation: mobile-carousel 26s linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes mobile-carousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-carousel-track {
+      animation: none;
+    }
   }
 </style>

@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<BaseLayout title="Tickr Privacy Policy">
+  <main class="relative min-h-screen overflow-hidden px-4 pb-20 pt-24 text-white sm:pt-28">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_#111827_0%,_#0f172a_50%,_#020617_100%)]"></div>
+    <div class="absolute -left-40 top-24 h-72 w-72 rounded-full bg-sky-500/20 blur-[140px]"></div>
+    <div class="absolute right-10 top-40 h-64 w-64 rounded-full bg-indigo-500/20 blur-[160px]"></div>
+
+    <Navbar />
+
+    <div class="mx-auto mt-10 w-full max-w-3xl space-y-10">
+      <header class="space-y-4">
+        <p class="text-xs uppercase tracking-[0.3em] text-white/50">Tickr</p>
+        <h1 class="text-3xl font-semibold sm:text-4xl">Privacy policy</h1>
+        <p class="text-base text-white/70">
+          Tickr keeps your salary amounts and income sources stored locally on your device using secure
+          storage. We do not sell or share your personal earnings data. Anonymous analytics may be
+          collected to improve the app, such as crash diagnostics and basic usage patterns.
+        </p>
+        <p class="text-sm text-white/60">Last updated: December 2025</p>
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white/80 transition hover:-translate-y-0.5 hover:text-white"
+        >
+          ← Back to home
+        </a>
+      </header>
+
+      <section class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-semibold">Data we store on your device</h2>
+        <p class="text-sm text-white/70">
+          Salary figures, income sources, and related details you enter in Tickr are saved on your device
+          using the platform's secure storage. This information does not leave your device unless you
+          choose to share or back it up through your operating system.
+        </p>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li>We do not run our own servers for your salary data, and we do not require you to create an account.</li>
+          <li>You control what you enter and can remove it by clearing entries in the app or uninstalling Tickr.</li>
+          <li>
+            If you use device-level backups (iCloud, Google device backup, etc.), your data may be included in
+            those backups under the provider's terms; we do not access it.
+          </li>
+        </ul>
+      </section>
+
+      <section class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-semibold">Analytics and diagnostics</h2>
+        <p class="text-sm text-white/70">
+          We collect anonymous analytics to understand app reliability and performance. These events help
+          prioritize fixes and improvements.
+        </p>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li>Crash reports and error logs (e.g., app version, device type, operating system, and error codes).</li>
+          <li>Basic usage signals (e.g., screens viewed, feature usage counts, session length) without salary amounts.</li>
+          <li>
+            Analytics are processed in aggregate and are not linked to your salary data or personal contact details.
+          </li>
+        </ul>
+      </section>
+
+      <section class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-semibold">Data sharing &amp; selling</h2>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li>We do not sell your personal earnings data.</li>
+          <li>We do not share salary or income entries with advertisers or third parties.</li>
+          <li>
+            Anonymous analytics and crash diagnostics may be processed by service providers solely to operate
+            and improve the app.
+          </li>
+        </ul>
+      </section>
+
+      <section class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-semibold">Security</h2>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li>Salary data is stored using platform-secure storage mechanisms on your device.</li>
+          <li>Protect access to your device with a passcode or biometrics and keep your operating system updated.</li>
+          <li>If your device is lost or compromised, remove data by wiping the device or uninstalling Tickr.</li>
+        </ul>
+      </section>
+
+      <section class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-semibold">Your choices</h2>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li>Review, edit, or delete the salary and income information you have entered at any time.</li>
+          <li>Delete the app to remove locally stored data from your device.</li>
+          <li>
+            For privacy questions or to report a concern, contact us at
+            <a class="text-white/90 hover:text-white" href="mailto:hello@fieldcraftlabs.dev">
+              hello@fieldcraftlabs.dev
+            </a>.
+          </li>
+        </ul>
+      </section>
+
+      <section class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-semibold">Changes to this policy</h2>
+        <p class="text-sm text-white/70">
+          We may update this policy to reflect changes in Tickr or applicable regulations. When updates are made,
+          we will revise the date above. Continued use of the app after an update signifies acceptance of the
+          revised policy.
+        </p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
