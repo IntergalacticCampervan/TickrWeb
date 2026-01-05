@@ -1,0 +1,250 @@
+---
+import FloatingCard from "./FloatingCard.astro";
+---
+
+<section id="hero" class="relative min-h-screen overflow-hidden px-4 pb-20 pt-28 text-center">
+  <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_#a78bfa_0%,_#7c3aed_45%,_#4c1d95_100%)]"></div>
+  <div class="absolute -left-32 top-20 h-72 w-72 rounded-full bg-fuchsia-400/30 blur-[120px]"></div>
+  <div class="absolute right-10 top-32 h-64 w-64 rounded-full bg-violet-300/30 blur-[140px]"></div>
+
+  <div class="mx-auto flex w-full max-w-5xl flex-col items-center gap-12">
+    <h1 class="max-w-3xl text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
+      See what you earn. <br class="hidden sm:block" />As you earn it.
+    </h1>
+
+    <div class="relative flex w-full items-center justify-center">
+      <div class="absolute z-10 hidden md:block">
+        <div
+          class="absolute left-1/2 top-1/2 card-drift"
+          data-x="-300"
+          data-y="-230"
+          data-depth="0.9"
+          style="--stack-x: -50%; --stack-y: -50%; --tilt: -3deg;"
+        >
+          <div class="animate-float-slow">
+            <FloatingCard
+              title="x day streak"
+              value="12 days"
+              description="Consistency pays off. Keep the streak alive."
+              className="w-56"
+            >
+              <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 2c2.76 2.3 4.5 5.23 4.5 8.4 0 4.13-3.01 7.6-6.75 7.6S3 14.53 3 10.4C3 7.23 4.74 4.3 7.5 2c.6 2.2 1.87 3.9 4.5 5.2C11.97 5.2 11.7 3.63 12 2Z"
+                />
+              </svg>
+            </FloatingCard>
+          </div>
+        </div>
+
+        <div
+          class="absolute left-1/2 top-1/2 card-drift"
+          data-x="-340"
+          data-y="-30"
+          data-depth="1.05"
+          style="--stack-x: -50%; --stack-y: -50%; --tilt: 2deg;"
+        >
+          <div class="animate-float-medium">
+            <FloatingCard
+              title="Morning Person"
+              value="$42.10"
+              description="Earned your first $X before 9:00 AM."
+              className="w-64"
+            >
+              <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M6 6h2V3H6v3Zm9 0h2V3h-2v3ZM3 11h3V9H3v2Zm15 0h3V9h-3v2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm8 4h-2a6 6 0 1 1-12 0H4a8 8 0 1 0 16 0Z"
+                />
+              </svg>
+            </FloatingCard>
+          </div>
+        </div>
+
+        <div
+          class="absolute left-1/2 top-1/2 card-drift"
+          data-x="-340"
+          data-y="210"
+          data-depth="0.95"
+          style="--stack-x: -50%; --stack-y: -50%; --tilt: -1deg;"
+        >
+          <div class="animate-float-medium">
+            <FloatingCard
+              title="Daily Win"
+              value="$18.40"
+              description="Hit your daily goal before lunch."
+              className="w-56"
+            >
+              <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 3a6 6 0 0 1 6 6c0 4-3 6-6 9-3-3-6-5-6-9a6 6 0 0 1 6-6Zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                />
+              </svg>
+            </FloatingCard>
+          </div>
+        </div>
+
+        <div
+          class="absolute left-1/2 top-1/2 card-drift"
+          data-x="290"
+          data-y="-230"
+          data-depth="0.85"
+          style="--stack-x: -50%; --stack-y: -50%; --tilt: 3deg;"
+        >
+          <div class="animate-float-medium">
+            <FloatingCard
+              title="Double Duty"
+              value="2 sources"
+              description="Had two income sources running simultaneously."
+              className="w-60"
+            >
+              <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M7 7a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm10 0a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM4 18a4 4 0 0 1 6.66-2.97A5 5 0 0 0 7 20H4v-2Zm16 2h-3a5 5 0 0 0-3.66-4.97A4 4 0 0 1 20 18v2Z"
+                />
+              </svg>
+            </FloatingCard>
+          </div>
+        </div>
+
+        <div
+          class="absolute left-1/2 top-1/2 card-drift"
+          data-x="350"
+          data-y="-30"
+          data-depth="1.1"
+          style="--stack-x: -50%; --stack-y: -50%; --tilt: -2deg;"
+        >
+          <div class="animate-float-slow">
+            <FloatingCard
+              title="First Payout"
+              value="$120.00"
+              description="Cleared your first milestone payout."
+              className="w-60"
+            >
+              <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm1 5h-2v3H8v2h3v3h2v-3h3v-2h-3V7Z"
+                />
+              </svg>
+            </FloatingCard>
+          </div>
+        </div>
+
+        <div
+          class="absolute left-1/2 top-1/2 card-drift"
+          data-x="310"
+          data-y="210"
+          data-depth="1.15"
+          style="--stack-x: -50%; --stack-y: -50%; --tilt: 2deg;"
+        >
+          <div class="animate-float-slow">
+            <FloatingCard
+              title="The Clock-Puncher"
+              value="5 days"
+              description="Started a manual stream 5 days in a row."
+              className="w-64"
+            >
+              <svg slot="icon" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm1 4h-2v5.2l3.6 2.1 1-1.7-2.6-1.5V6Zm-7 13h12v2H6v-2Z"
+                />
+              </svg>
+            </FloatingCard>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative z-20 flex flex-col items-center gap-8">
+        <div class="relative">
+          <div class="absolute inset-4 rounded-[2.75rem] bg-purple-200/60 blur-[70px]"></div>
+          <div class="absolute inset-6 rounded-[2.75rem] bg-white/70 blur-[60px]"></div>
+          <div class="relative w-[220px] rounded-[2.8rem] border border-white/20 bg-black/40 p-3 shadow-2xl sm:w-[260px] md:w-[300px]">
+            <div class="relative aspect-[9/19.5] w-full rounded-[2.4rem] border border-white/10 bg-slate-900/80 shadow-inner">
+              <div class="absolute left-1/2 top-3 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black/70"></div>
+              <div class="relative h-full w-full overflow-hidden rounded-[2.4rem] border border-white/10 bg-gradient-to-b from-slate-800/80 to-slate-900/90">
+                <div
+                  id="screen-preview"
+                  class="h-full w-full bg-[url('/AppScreenshot.jpg')] bg-cover bg-center"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="max-w-md text-sm text-white/80">
+          From transactions to dapps — explore every corner of the Bitcoin universe with ease.
+        </p>
+
+        <button
+          class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-purple-700 shadow-lg transition hover:-translate-y-0.5"
+        >
+          <span class="flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 text-purple-700">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 5a1 1 0 0 1 1 1v4.6l3.3-3.3 1.4 1.4-4.7 4.7-4.7-4.7 1.4-1.4 3.3 3.3V6a1 1 0 0 1 1-1Z"
+              />
+            </svg>
+          </span>
+          Join the Beta
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const cards = document.querySelectorAll(".card-drift");
+  const hero = document.querySelector("#hero");
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const heroTop = hero ? hero.offsetTop : 0;
+      const heroHeight = hero ? hero.offsetHeight : window.innerHeight;
+      const maxScroll = Math.max(heroHeight - window.innerHeight, 1);
+      const rawProgress = (window.scrollY - heroTop) / maxScroll;
+      const progress = Math.min(Math.max(rawProgress, 0), 1);
+      const eased = 1 - Math.pow(1 - progress, 2);
+      cards.forEach((card) => {
+        const x = parseFloat(card.dataset.x || "0");
+        const y = parseFloat(card.dataset.y || "0");
+        const depth = parseFloat(card.dataset.depth || "1");
+        const cardWidth = card.offsetWidth || 0;
+        const cardHeight = card.offsetHeight || 0;
+        const maxX = Math.max(window.innerWidth / 2 - cardWidth / 2 - 24, 0);
+        const maxY = Math.max(window.innerHeight / 2 - cardHeight / 2 - 24, 0);
+        const targetX = x * eased * depth;
+        const targetY = y * eased * depth;
+        const clampedX = Math.max(Math.min(targetX, maxX), -maxX);
+        const clampedY = Math.max(Math.min(targetY, maxY), -maxY);
+        card.style.setProperty("--spread-x", `${clampedX}px`);
+        card.style.setProperty("--spread-y", `${clampedY}px`);
+      });
+      ticking = false;
+    });
+  };
+
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+</script>
+
+<style>
+  .card-drift {
+    --spread-x: 0px;
+    --spread-y: 0px;
+    --stack-x: -50%;
+    --stack-y: -50%;
+    --tilt: 0deg;
+    transform: translate(var(--stack-x), var(--stack-y)) translate(var(--spread-x), var(--spread-y))
+      rotate(var(--tilt));
+    transition: transform 140ms ease-out;
+  }
+</style>
