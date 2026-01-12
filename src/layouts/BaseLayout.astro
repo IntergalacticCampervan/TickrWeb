@@ -16,7 +16,12 @@ const { title = "TickrWeb", description = "See what you earn. As you earn it." }
   <body class="min-h-full font-sans">
     <slot />
     <footer class="border-t border-white/5 bg-white/5 py-6 text-center text-xs text-white/50 backdrop-blur">
-      powered by <a href="https://fieldcraftlabs.dev" class="text-white/80 hover:text-white">fieldcraft</a>
+      <span class="inline-flex items-center justify-center gap-2">
+        <span>powered by</span>
+        <a href="https://fieldcraftlabs.dev" class="inline-flex items-center">
+          <img src="/fieldcraft-logo.png" alt="Fieldcraft Labs" class="h-12 w-auto" />
+        </a>
+      </span>
     </footer>
   </body>
 </html>
